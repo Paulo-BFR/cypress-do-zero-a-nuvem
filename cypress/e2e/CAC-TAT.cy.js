@@ -142,7 +142,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 
   })
 
-  it.('seleciona um arquivo da pasta fixtures', () => {
+  it('seleciona um arquivo da pasta fixtures', () => {
     cy.fillMandatoryFieldsAndSubmit()
 
       cy.get('select').select('Blog')
@@ -237,7 +237,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 
   })
 
-  it.only('acessa a página da política de privacidade removendo o target e então clicando no link', () => {
+  it('acessa a página da política de privacidade removendo o target e então clicando no link', () => {
       //contains('a', 'Politica de privacidade')
       cy.contains('a', 'Política de Privacidade')
       .invoke('removeAttr', 'target')

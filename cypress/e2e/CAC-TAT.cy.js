@@ -4,11 +4,11 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.visit('./src/index.html')
   })
 
-  it.skip('verifica o título da aplicação', () => {
+  it('verifica o título da aplicação', () => {
     cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT')
   })
   
-  it.skip('preenche os campos obrigatórios e envia o formulário', () => {
+  it('preenche os campos obrigatórios e envia o formulário', () => {
     cy.get('#firstName').type('Paulo{enter}') 
     
     cy.get('#lastName').type('Rubens{enter}')
@@ -28,7 +28,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     
   })
 
-  it.skip('exibe mensagem de erro ao submeter o formulário com um email com formatação inválida', () => {
+  it('exibe mensagem de erro ao submeter o formulário com um email com formatação inválida', () => {
     cy.get('#firstName')
     .type('Paulo{enter}')
     
@@ -51,7 +51,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.get('.error').should('be.visible')
   })
 
-  it.skip('exibe mensagem de erro quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', () => {
+  it('exibe mensagem de erro quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', () => {
     cy.get('#firstName')
     .type('Paulo{enter}')
     
@@ -73,7 +73,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 
   })
 
-  it.skip('preenche e limpa os campos nome, sobrenome, email e telefone', () => {
+  it('preenche e limpa os campos nome, sobrenome, email e telefone', () => {
     cy.get('#firstName')
     .type('Paulo{enter}')
     .should('have.value', 'Paulo')
@@ -107,17 +107,17 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 
   })
 
-  it.skip('exibe mensagem de erro ao submeter o formulário sem preencher os campos obrigatórios', () => {
+  it('exibe mensagem de erro ao submeter o formulário sem preencher os campos obrigatórios', () => {
     cy.contains('button', 'Enviar').click()
 
     cy.get('.error').should('be.visible')
   })
 
-  it.skip('comando customizado', () => {
+  it('comando customizado', () => {
     cy.fillMandatoryFieldsAndSubmit()
   })
 
-  it.skip('seleciona um produto (YouTube) por seu texto', () => {
+  it('seleciona um produto (YouTube) por seu texto', () => {
     cy.fillMandatoryFieldsAndSubmit()
 
       cy.get('select').select('Blog')
@@ -142,7 +142,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 
   })
 
-  it.skip('seleciona um arquivo da pasta fixtures', () => {
+  it.('seleciona um arquivo da pasta fixtures', () => {
     cy.fillMandatoryFieldsAndSubmit()
 
       cy.get('select').select('Blog')
@@ -171,7 +171,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 
   })
 
-  it.skip('seleciona um arquivo simulando um drag-and-drop', () => {
+  it('seleciona um arquivo simulando um drag-and-drop', () => {
     cy.fillMandatoryFieldsAndSubmit()
 
       cy.get('select').select('Blog')
@@ -203,7 +203,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 
   })
 
-  it.skip('verifica que a política de privacidade abre em outra aba sem a necessidade de um clique', () => {
+  it('verifica que a política de privacidade abre em outra aba sem a necessidade de um clique', () => {
     cy.fillMandatoryFieldsAndSubmit()
 
       cy.get('select').select('Blog')

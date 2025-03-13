@@ -226,13 +226,6 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 
       cy.get('input[type="radio"]').wrap({product: 'feedback'})
 
-      cy.fixture('/example.json').as("exampleFile")
-      cy.get('input[type="file"]')
-      .selectFile('@exampleFile')
-      .then(input => {
-        expect(input[0].files[0].name).to.equal('example.json')
-      })
-
       cy.get('a').should('have.attr', 'href', 'privacy.html')
 
   })

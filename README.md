@@ -2,14 +2,21 @@ Curso Cypress
 👋 Seja bem-vindo(a)!
 
 
-Nesta documentação esta listado as estapas para teste da pagina de atendimento ao cliente CAT TAT, onde é explorada diversas funcionalidades para praticar as lições dadas durante o curso.
+Sample project to demonstrate a project that I am learning of Cypress.
 
-- Verificação básica inicial do titulo da página
-- Preenchimento de campos obrigatórios
-- Verificação de mensagens de erro
-- Comandos customizados
-- Seleção de um campo pelo texto
-- Selecionando e anexando um arquivo da pasta fixtures na aplicação
-- Selecionando e inserindo um arquivo com a função de arrastar e soltar
-- Acessar uma pagina que abre em outra guia do navegador de diferentes formas
+Pre-requirements
+It is required to have Node.js and npm installed to run this project.
 
+I used versions v18.15.0 and 9.5.0 of Node.js and npm, respectively. I suggest you use the same or later versions.
+
+Installation
+Run npm install (or npm i for the short version) to install the dev dependencies.
+
+Tests
+Note: Before running the tests, make a copy of the cypress.env.example.json file as cypress.env.json, which in the real world, you would update with valid credentials.
+
+The cypress.env.json file is included on .gitignore and you're safe that confidential info won't be versioned.
+
+Run npm test (or npm t for the short version) to run the test in headless mode.
+
+Or, run npm run cy:open to open Cypress in interactive mode.
